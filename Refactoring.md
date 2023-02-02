@@ -9,3 +9,13 @@ You've been asked to refactor the function `deterministicPartitionKey` in [`dpk.
 You will be graded on the exhaustiveness and quality of your unit tests, the depth of your refactor, and the level of insight into your thought process provided by the written explanation.
 
 ## Your Explanation Here
+
+1. create a privat method to generate the hash by Event `getCandidateEncryptForEvent`
+
+1.1 remove several conditions in `getCandidateEncryptForEvent` to create a more readable
+
+2. move the encrypted Array process before to Object process cuz the Array is an object itself
+
+2.1 Add `typeof candidate === "object"` condition when partitionKey is an Array to make sure that we are able to use the `.length` property
+
+3. Create unit testing for all possible scenaries
